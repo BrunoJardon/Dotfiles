@@ -1,0 +1,9 @@
+/* Paleta de colores Graphite-Kitty */
+* {
+    background:     #1e1f22FF; /* El gris oscuro de tu Waybar */
+    background-alt: #2a2e33FF; /* Gris un poco más claro para items */
+    foreground:     #bcbcbcFF; /* El texto claro */
+    selected:       #6d90b0FF; /* Tu azul principal de foco */
+    active:         #b3be5aFF; /* Verde para estados activos */
+    urgent:         #b74d50FF; /* Rojo para alertas/power */
+}

@@ -1,0 +1,15 @@
+set $mod Mod4 
+
+# Aplicaciones 
+set $term kitty 
+set $browser brave 
+set $explorer thunar 
+
+# Menús Rofi 
+set $menu "sh $HOME/.config/rofi/launchers/launcher.sh" 
+set $powermenu "sh $HOME/.config/rofi/powermenu/powermenu.sh" 
+set $screenshot "sh $HOME/.config/rofi/applets/screenshot.sh"
+set $recorder "sh $HOME/.config/rofi/applets/recorder.sh"
+
+# Estética 
+set $opacity 0.9

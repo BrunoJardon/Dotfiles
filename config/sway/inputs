@@ -1,0 +1,11 @@
+# Layout de teclado 
+input type:keyboard {
+    xkb_layout latam 
+}
+
+# Configuración del touchpad 
+input "type:touchpad" {
+    dwt disabled 
+    tap enabled 
+    natural_scroll enabled 
+}

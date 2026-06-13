@@ -1,0 +1,52 @@
+# Fondo de pantalla y temas GTK
+
+output * background ~/Pictures/wallpapers/wallpaper fill
+#output * background #000000 solid_color
+
+exec {
+    gsettings set org.gnome.desktop.interface font-name 'MesloLGL Nerd Font Regular 9'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Dark-compact'
+    gsettings set org.gnome.desktop.interface cursor-theme '"Simp1e-Adw-Dark"'
+    gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+    gsettings set org.gnome.desktop.interface cursor-size 16
+}
+
+# Configuración de bordes y esquinas (SwayFX)
+corner_radius 8
+for_window [class="^.*"] border pixel 1
+default_border pixel 1
+default_floating_border pixel 1
+hide_edge_borders smart
+
+# Gaps
+gaps inner 5
+gaps outer 5
+
+# Efectos de Blur (SwayFX)
+blur enable
+blur_radius 8
+blur_passes 3
+blur_noise 0.015
+blur_brightness 0.9
+
+# Sombras (SwayFX)
+layer_effects {
+    shadow {
+        enable yes
+        radius 20
+        offset 4 4
+        color #00000040
+    }
+}
+
+# Colores de ventanas (Máximo 5 argumentos)
+client.focused              #6d90b0 #1e1f22 #bcbcbc #6d90b0 #6d90b0
+client.focused_inactive     #2a2e33 #161718 #bcbcbc #2a2e33 #2a2e33
+client.unfocused            #2a2e33 #161718 #bcbcbc #2a2e33 #2a2e33
+client.urgent               #b74d50 #1e1f22 #bcbcbc #b74d50 #b74d50
+client.placeholder          #161718 #161718 #bcbcbc #161718 #161718
+
+# Opacidad y Cursor
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+seat * hide_cursor 7500

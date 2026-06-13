@@ -1,0 +1,194 @@
+/* --- Configuración Global --- */
+* {
+  font-family: "MesloLGL Nerd Font";
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+tooltip {
+  background: #1e1f22;
+  border: 1px solid #6d90b0;
+  border-radius: 8px;
+}
+
+tooltip label {
+  font-size: 12px;
+  color: #bcbcbc;
+  padding: 6px 3px;
+}
+
+#workspaces,
+#custom-swayidle,
+#clock,
+#backlight,
+#battery,
+#pulseaudio,
+#custom-powermenu,
+#custom-spotifycava,
+#tray,
+#network,
+#bluetooth,
+#custom-system,
+#mpris,
+#mode {
+  background-color: #1e1f22;
+  color: #bcbcbc;
+  padding: 2px 8px;
+  margin: 0 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+}
+
+/* --- SECCIÓN IZQUIERDA --- */
+
+#workspaces {
+  padding: 0;
+}
+
+#workspaces button {
+  color: #5a6169;
+  padding: 0 6px;
+  transition: all 0.125s ease-in-out;
+  background: transparent;
+}
+
+#workspaces button.focused {
+  color: #bcbcbc;
+  transition: all 0.125s ease-in-out;
+}
+
+@keyframes urgent-blink {
+  0% {
+    color: #e5894f;
+    background: radial-gradient(circle,
+        rgba(229, 137, 79, 0.25) 25%,
+        transparent 75%);
+  }
+
+  50% {
+    color: #5a6169;
+    background: transparent;
+  }
+
+  100% {
+    color: #e5894f;
+    background: radial-gradient(circle,
+        rgba(229, 137, 79, 0.25) 25%,
+        transparent 75%);
+  }
+}
+
+#workspaces button.urgent {
+  color: #e5894f;
+  background: radial-gradient(circle,
+      rgba(229, 137, 79, 0.25) 25%,
+      transparent 75%);
+  animation: urgent-blink 1.75s ease-in-out infinite;
+}
+
+#mpris.spotify,
+#custom-spotifycava {
+  color: #1db954;
+}
+
+#mpris.vlc {
+  color: #ff8800;
+}
+
+#tray {
+  margin-right: 8px;
+}
+
+#group-tray {
+  transition: all 0.3s ease-in-out;
+}
+
+#group-tray:hover {
+  color: rgba(188, 188, 188, 0.75);
+}
+
+/* --- SECCIÓN DERECHA --- */
+
+/* Estilo base para los grupos */
+/* Lado izquierdo */
+#clock,
+#backlight,
+#network,
+#battery {
+  margin-right: 0;
+  padding-right: 4px;
+  border-radius: 8px 0 0 8px;
+  background-color: #1e1f22;
+  box-shadow: -2px 0 3px rgba(0, 0, 0, 0.35);
+}
+
+/* Lado derecho */
+#custom-swayidle,
+#pulseaudio,
+#bluetooth,
+#custom-powermenu {
+  margin-left: 0;
+  padding-left: 4px;
+  border-radius: 0 8px 8px 0;
+  background-color: #1e1f22;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.35);
+}
+
+#pulseaudio.muted {
+  color: #5a6169;
+}
+
+#network {
+  color: #b3be5a;
+}
+
+#network.disconnected,
+#network.disabled {
+  color: #b74d50;
+}
+
+#bluetooth {
+  color: #6d90b0;
+}
+
+#bluetooth.connected {
+  color: #b3be5a;
+}
+
+#battery {
+  color: #bcbcbc;
+}
+
+#battery.warning {
+  color: #e3b55e;
+}
+
+#battery.critical {
+  color: #b74d50;
+}
+
+#battery.charging {
+  color: #b3be5a;
+}
+
+@keyframes battery-critical-blink {
+  to {
+    background-color: #b74d50;
+    color: #1e1f22;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: #b74d50;
+  animation: battery-critical-blink 0.5s infinite alternate;
+}
+
+#custom-powermenu {
+  color: #b74d50;
+}

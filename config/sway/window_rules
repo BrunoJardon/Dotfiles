@@ -1,0 +1,38 @@
+# Workspace 12 (Mensajería)
+for_window [workspace="12"] layout tabbed
+
+assign [app_id="brave" title="WhatsApp Web"] 12
+assign [class="Spotify"] 12
+assign [class="discord"] 12
+
+# Ventanas flotantes y utilidades
+for_window [title="^Sign In - Google Accounts.*"] floating enable
+for_window [app_id="blueman-manager"] floating enable
+for_window [app_id="(pavucontrol|psensor)"] floating enable
+for_window [title=".*(Open|Save|Select|Rename|Confirm|File).*"] floating enable
+for_window [title="(Extract|Extract archive|Compress)"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="utility"] floating enable
+for_window [app_id="org.gnome.gThumb"] floating enable
+
+# Tamaños específicos
+for_window [app_id="qalculate-gtk"] {
+    floating enable
+    resize set 448 484
+    move position 160 55
+    border pixel 0
+}
+
+for_window [title="Picture in picture"] {
+    floating enable
+    sticky enable
+    resize set 426 240
+    move position 919 475
+    border pixel 0
+}
+
+for_window [app_id="mpv"] {
+    floating enable
+    resize set 960 540
+    border pixel 0
+}

@@ -1,0 +1,14 @@
+# Servicios del entorno
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,pkcs11,ssh 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id nm-applet 
+exec --no-startup-id dunst
+
+exec autotiling -w 1 2 3 4 5 6 7 8 9 10 & 
+exec wl-clip-persist --clipboard regular -l 52428800 
+
+# Waybar
+bar { 
+     swaybar_command waybar 
+     position top 
+}

@@ -1,0 +1,52 @@
+# Workspace Gaming
+set $ws_game "11"
+
+# Layout por defecto
+for_window [workspace=$ws_game] layout tabbed
+
+# Launchers
+# Steam
+assign [class="Steam"] $ws_game
+assign [instance="steam"] $ws_game
+
+# Steam Games (Proton/Native)
+assign [instance="steam_app_.*"] $ws_game
+
+# Lutris
+assign [app_id="lutris"] $ws_game
+assign [class="Lutris"] $ws_game
+
+# Heroic
+assign [app_id="heroic"] $ws_game
+assign [class="Heroic"] $ws_game
+assign [class="heroic"] $ws_game
+
+# Bottles
+assign [app_id="bottles"] $ws_game
+assign [class="Bottles"] $ws_game
+
+# Prism Launcher
+assign [class="PrismLauncher"] $ws_game
+
+# MultiMC
+assign [class="MultiMC"] $ws_game
+
+# Modrinth App
+assign [app_id="modrinth-app"] $ws_game
+
+# Minecraft
+assign [instance="minecraft.*"] $ws_game
+assign [class="Minecraft.*"] $ws_game
+assign [title="Minecraft.*"] $ws_game
+
+# Wine
+assign [class="Wine"] $ws_game
+assign [instance="wine"] $ws_game
+
+# Gamescope
+assign [class="gamescope"] $ws_game
+assign [app_id="gamescope"] $ws_game
+
+# Shortcuts
+bindsym $mod+bar workspace number $ws_game
+bindsym $mod+Shift+bar move container to workspace number $ws_game

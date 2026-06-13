@@ -1,0 +1,15 @@
+# Ruta base de configuración 
+set $CONF_PATH ~/.config/sway
+
+# Inclusión de módulos 
+include $CONF_PATH/variables
+include $CONF_PATH/autostarts
+include $CONF_PATH/visuals
+include $CONF_PATH/inputs
+include $CONF_PATH/keybinds
+include $CONF_PATH/window_rules
+include $CONF_PATH/gaming
+include $CONF_PATH/idle
+
+# Configuraciones del sistema 
+include /etc/sway/config.d/*
