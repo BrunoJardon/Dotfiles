@@ -71,6 +71,3 @@
 **System monitor:**
 
 ![](./screenshots/system_btop.png)
-
-## Dependencies
-All dependencies are listed in [pkglist](./pkglist.txt) file.
